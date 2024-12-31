@@ -30,21 +30,23 @@ go
 insert into Coded12.Departments values('HR', 'New York'),
 									  ('IT', 'San Francisco'),
 									  ('Finance', 'Chicago')
-go
+go --Q1
 insert into Coded12.Employees values('Elliot Alderson', 'Pentester', 3000, 2, GETDATE())
-go
+go --Q2
+update Coded12.Employees set empSalary = 5000 where empName = 'Jane Smith'
+go --Q3
 delete Coded12.Employees where empId = 3
-go
+go --Q4
 select * from Coded12.Employees where empDepId = 2
-go
+go --Q5
 insert into Coded12.Departments values('Administration', 'New Jersey')
-go
+go --Q6
 select * from Coded12.Departments where depLocation = 'New York'
-go
+go --Q7
 update Coded12.Departments set depLocation = 'Boston' where depName = 'HR'
-go
+go --Q8
 update Coded12.Employees set empSalary *= 1.10
-go
+go --Q9
 delete Coded12.Employees where empDepId = 3
-go
+go --Q10
 insert into Coded12.Employees values('Tyrell Wellick', 'Sr. Vice President of Technology', 3000, 2, GETDATE())
